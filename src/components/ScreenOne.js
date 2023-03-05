@@ -8,7 +8,7 @@ export function ScreenOne(props) {
       <div>
         <GiArcher className="screenthree-icon" />
       </div>
-      <h1 className="first-word">Aim training</h1>
+      <h1 className="first-word">Archer</h1>
       <Button onClick={props.onButtonClick}>Start game</Button>
     </div>
   );
