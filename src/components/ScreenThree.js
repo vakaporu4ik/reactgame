@@ -46,7 +46,7 @@ export function ScreenThree(props) {
       <div className="points">Active points: {points}</div>
       {showDialog ? (
         <dialog className="dialog" open>
-          <p>You results:{points} </p>
+          <p className="results">You results:{points} </p>
           <form method="dialog">
             <Button onClick={props.onTryAgain}>Try again</Button>
           </form>

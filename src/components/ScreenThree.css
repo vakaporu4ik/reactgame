@@ -22,6 +22,7 @@
 }
 
 .points {
+  font-family: sans-serif;
   font-size: 24px;
 }
 
@@ -30,4 +31,12 @@
   border-radius: 6px;
   border: 1px solid white;
   color: white;
+  font-family: sans-serif;
+  font-size: 24px;
+}
+
+.results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
