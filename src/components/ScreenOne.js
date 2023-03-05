@@ -1,5 +1,6 @@
 import "./ScreenOne.css";
 import { GiArcher } from "react-icons/gi";
+import { Button } from "./Button";
 
 export function ScreenOne(props) {
   return (
@@ -8,9 +9,7 @@ export function ScreenOne(props) {
         <GiArcher className="screenthree-icon" />
       </div>
       <h1 className="first-word">Aim training</h1>
-      <button className="first-btn" onClick={props.onButtonClick}>
-        Start game
-      </button>
+      <Button onClick={props.onButtonClick}>Start game</Button>
     </div>
   );
 }

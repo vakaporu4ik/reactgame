@@ -1,0 +1,16 @@
+.button {
+  padding: 14px 40px;
+  min-width: 200px;
+  background-color: var(--grass10);
+  color: white;
+  border-radius: 12px;
+  border-color: var(--grass8);
+  border-style: solid;
+  font-size: 16px;
+  cursor: pointer;
+  transition-property: 0.4s;
+}
+.button:hover {
+  background-color: var(--grass9);
+  box-shadow: 0px 0px 8px 4px hsla(131, 39%, 52.1%, 0.3);
+}

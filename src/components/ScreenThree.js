@@ -1,7 +1,7 @@
 import "./ScreenThree.css";
-import { GiArcher } from "react-icons/gi";
 import { Board } from "./Board";
 import { useState, useEffect } from "react";
+import { Button } from "./Button";
 
 export function ScreenThree(props) {
   const [points, setPoints] = useState(0);
@@ -9,6 +9,13 @@ export function ScreenThree(props) {
   const minutes = String(Math.floor(timeLeft / 60)).padStart(2, "0");
   const seconds = String(timeLeft % 60).padStart(2, "0");
   const timeLabel = `${minutes}:${seconds}`;
+  const [showDialog, setShowDialog] = useState(false);
+
+  useEffect(() => {
+    if (timeLeft === 0) {
+      setShowDialog(true);
+    }
+  }, [timeLeft]);
 
   useEffect(() => {
     let id;
@@ -37,6 +44,14 @@ export function ScreenThree(props) {
         }}
       />
       <div className="points">Active points: {points}</div>
+      {showDialog ? (
+        <dialog className="dialog" open>
+          <p>You results:{points} </p>
+          <form method="dialog">
+            <Button onClick={props.onTryAgain}>Try again</Button>
+          </form>
+        </dialog>
+      ) : null}
     </div>
   );
 }

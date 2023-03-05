@@ -1,6 +1,5 @@
 import "./Board.css";
 import { useState } from "react";
-import { GiArcher } from "react-icons/gi";
 
 const colors = [
   "var(--tomato10)",
@@ -40,9 +39,7 @@ export function Board({ onPointScored, timeLeft }) {
             height: ball.size,
           }}
         />
-      ) : (
-        <GiArcher className="board-icon" />
-      )}
+      ) : null}
     </div>
   );
 }

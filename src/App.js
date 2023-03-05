@@ -25,7 +25,16 @@ function App() {
         }}
       />
     );
-  if (screen === 3) return <ScreenThree time={time} />;
+  if (screen === 3)
+    return (
+      <ScreenThree
+        time={time}
+        onTryAgain={() => {
+          setTime(null);
+          setScreen(1);
+        }}
+      />
+    );
 
   return null;
 }
