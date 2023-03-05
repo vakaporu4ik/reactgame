@@ -24,7 +24,8 @@
 
 .points {
   font-family: sans-serif;
-  font-size: 24px;
+  font-size: 18px;
+  margin-top: 12px;
 }
 
 .dialog {

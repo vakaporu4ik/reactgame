@@ -43,7 +43,7 @@ export function ScreenThree(props) {
           setPoints(points + 1);
         }}
       />
-      <div className="points">Active points: {points}</div>
+      <div className="points">Points: {points}</div>
       {showDialog ? (
         <dialog className="dialog" open>
           <p className="results">You result: {points}</p>
