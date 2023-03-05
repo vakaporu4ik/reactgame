@@ -1,0 +1,26 @@
+.screen-three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.time-left {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  font-size: 48px;
+  color: white;
+}
+
+.time-label {
+  color: var(--grass10);
+}
+
+.points {
+  font-size: 24px;
+}

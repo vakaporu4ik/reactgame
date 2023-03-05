@@ -1,13 +1,22 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  background-color: black;
+  color: white;
+  --grass1: hsl(146, 30%, 7.4%);
+  --grass2: hsl(136, 33.3%, 8.8%);
+  --grass3: hsl(137, 36%, 11.4%);
+  --grass4: hsl(137, 37.6%, 13.7%);
+  --grass5: hsl(136, 38.7%, 16%);
+  --grass6: hsl(135, 39.6%, 19.1%);
+  --grass7: hsl(134, 40.3%, 23.8%);
+  --grass8: hsl(131, 40.1%, 30.8%);
+  --grass9: hsl(131, 41%, 46.5%);
+  --grass10: hsl(131, 39%, 52.1%);
+  --grass11: hsl(131, 43%, 57.2%);
+  --grass12: hsl(137, 72%, 94%);
+  --indigo10: hsl(227, 75.2%, 61.6%);
+  --tomato10: hsl(10, 81.7%, 59%);
+  --amber10: hsl(43, 100%, 64%);
+  --mint10: hsl(163, 80%, 77%);
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  --purple10: hsl(273, 57.3%, 59.1%);
 }
