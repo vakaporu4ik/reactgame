@@ -1,7 +1,9 @@
 .board {
   position: relative;
-  width: 500px;
-  height: 500px;
+  max-width: 500px;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  width: 100%;
   border: 1px solid var(--grass10);
   border-radius: 6px;
 }

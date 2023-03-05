@@ -1,5 +1,6 @@
 import "./Board.css";
 import { useState } from "react";
+import { useRef } from "react";
 
 const colors = [
   "var(--tomato10)",
@@ -14,17 +15,22 @@ export function Board({ onPointScored, timeLeft }) {
     x: "245px",
     y: "245px",
   });
+  const boardRef = useRef(null);
+
   return (
-    <div className="board">
+    <div ref={boardRef} className="board">
       {timeLeft > 0 ? (
         <div
           onClick={() => {
             // if (timeLeft <= 0) return;
             //   if (timeLeft > 0) {
+
+            const { width: boardSize } =
+              boardRef.current.getBoundingClientRect();
             const color = colors[Math.floor(Math.random() * colors.length)];
             const size = getRandomNumber(15, 80);
-            const x = getRandomNumber(0, 500 - size);
-            const y = getRandomNumber(0, 500 - size);
+            const x = getRandomNumber(0, boardSize - size);
+            const y = getRandomNumber(0, boardSize - size);
 
             setBall({ color, size: `${size}px`, x: `${x}px`, y: `${y}px` });
             onPointScored();

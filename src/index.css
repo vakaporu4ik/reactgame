@@ -1,4 +1,5 @@
 body {
+  margin: 0;
   background-color: black;
   color: white;
   --grass1: hsl(146, 30%, 7.4%);
@@ -17,6 +18,9 @@ body {
   --tomato10: hsl(10, 81.7%, 59%);
   --amber10: hsl(43, 100%, 64%);
   --mint10: hsl(163, 80%, 77%);
-
   --purple10: hsl(273, 57.3%, 59.1%);
+}
+
+* {
+  box-sizing: border-box;
 }
