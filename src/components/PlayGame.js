@@ -1,19 +1,17 @@
-import "./ScreenThree.css";
+import "./PlayGame.css";
 import { Board } from "./Board";
 import { useState, useEffect } from "react";
-import { Button } from "./Button";
 
-export function ScreenThree(props) {
-  const [points, setPoints] = useState(0);
+export function PlayGame(props) {
   const [timeLeft, setTimeLeft] = useState(props.time);
   const minutes = String(Math.floor(timeLeft / 60)).padStart(2, "0");
   const seconds = String(timeLeft % 60).padStart(2, "0");
   const timeLabel = `${minutes}:${seconds}`;
-  const [showDialog, setShowDialog] = useState(false);
+  const [newPage, setNewPage] = useState(false);
 
   useEffect(() => {
     if (timeLeft === 0) {
-      setShowDialog(true);
+      setNewPage(props.onTimeUp);
     }
   }, [timeLeft]);
 
@@ -39,19 +37,10 @@ export function ScreenThree(props) {
       <Board
         timeLeft={timeLeft}
         onPointScored={() => {
-          /// poroporty onPS
-          setPoints(points + 1);
+          props.onPointScored();
         }}
       />
-      <div className="points">Points: {points}</div>
-      {showDialog ? (
-        <dialog className="dialog" open>
-          <p className="results">You result: {points}</p>
-          <form method="dialog">
-            <Button onClick={props.onTryAgain}>Try again</Button>
-          </form>
-        </dialog>
-      ) : null}
+      <div className="points">Points: {props.points}</div>
     </div>
   );
 }

@@ -1,11 +1,13 @@
-import "./ScreenTwo.css";
-import { IconName } from "react-icons/gi";
+import "./ChooseTime.css";
 import { Button } from "./Button";
+import { GiSandsOfTime } from "react-icons/gi";
 
-export function ScreenTwo(props) {
+export function ChooseTime(props) {
   return (
     <div className="screen-two">
-      <h1 className="name-btn">Choose time</h1>
+      <h1 className="name-btn">
+        Choose time <GiSandsOfTime />
+      </h1>
       <div className="all-btn">
         <Button onClick={() => props.onNextClick(10)}>10</Button>
         <Button onClick={() => props.onNextClick(20)}>20</Button>

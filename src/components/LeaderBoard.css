@@ -1,0 +1,57 @@
+.leader-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  min-height: 100vh;
+}
+.leader {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 48px;
+  color: white;
+}
+.results {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
+
+.leader-rank {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 32px;
+  font-family: monospace;
+  font-size: 24px;
+  color: white;
+}
+.leaderboard-rank {
+  display: flex;
+  justify-content: end;
+}
+.crown-gold {
+  cursor: pointer;
+  margin-right: 10px;
+  color: gold;
+  transform: scale(1);
+  transform: scale(1, 1);
+}
+.crown-gold:hover {
+  transform: scale(3, 3);
+}
+.crown-silver {
+  margin-right: 10px;
+  color: silver;
+  transform: scale(1);
+}
+.crown-bronze {
+  margin-right: 10px;
+  color: brown;
+  transform: scale(1);
+}

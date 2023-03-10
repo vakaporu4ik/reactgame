@@ -1,8 +1,8 @@
-import "./ScreenOne.css";
+import "./StartGame.css";
 import { GiArcher } from "react-icons/gi";
 import { Button } from "./Button";
 
-export function ScreenOne(props) {
+export function StartGame(props) {
   return (
     <div className="screen-one">
       <div>
